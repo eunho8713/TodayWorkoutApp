@@ -1,0 +1,6 @@
+framework module Pods_TodayWorkoutTests {
+  umbrella header "Pods-TodayWorkoutTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

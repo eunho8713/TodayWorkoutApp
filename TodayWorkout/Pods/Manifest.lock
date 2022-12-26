@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (5.6.4)
+  - XMLCoder (0.14.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.5)
+  - XMLCoder (~> 0.14.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - XMLCoder
+
+SPEC CHECKSUMS:
+  Alamofire: 4e95d97098eacb88856099c4fc79b526a299e48c
+  XMLCoder: 0199b725702f32aa3190a88ea2f6fb4847bfe1d1
+
+PODFILE CHECKSUM: ee5645f8d065b0dbd0c649289d995f550e653308
+
+COCOAPODS: 1.11.3
