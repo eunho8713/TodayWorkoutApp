@@ -16,31 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjD-yH-XfA">
-                                <rect key="frame" x="20" y="44" width="374" height="193"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="IvJ-WZ-dve"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="cfx-KF-jfc"/>
-                            </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" id="LCc-ei-68t">
-                                <rect key="frame" x="149" y="211" width="116" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="18a-4g-5gz">
-                                <rect key="frame" x="174" y="369" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="tap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TcH-H6-IWc"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NB9-zv-7wM">
+                                <rect key="frame" x="20" y="44" width="374" height="222"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IjD-yH-XfA">
+                                        <rect key="frame" x="0.0" y="17" width="374" height="205"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <viewLayoutGuide key="contentLayoutGuide" id="IvJ-WZ-dve"/>
+                                        <viewLayoutGuide key="frameLayoutGuide" id="cfx-KF-jfc"/>
+                                    </scrollView>
+                                    <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="wp5-h7-MDM">
+                                        <rect key="frame" x="129" y="188" width="116" height="26"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </pageControl>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NB9-zv-7wM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Io3-wb-PQi"/>
+                            <constraint firstItem="NB9-zv-7wM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Jjn-TD-CUF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NB9-zv-7wM" secondAttribute="trailing" constant="20" id="db6-fL-Clf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NB9-zv-7wM" secondAttribute="bottom" constant="596" id="qEp-wk-1f4"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="pageControl" destination="LCc-ei-68t" id="tAj-O9-vmm"/>
+                        <outlet property="pageControl" destination="wp5-h7-MDM" id="PxJ-U1-2L4"/>
                         <outlet property="scrollView" destination="IjD-yH-XfA" id="sSM-X4-b6L"/>
                     </connections>
                 </viewController>

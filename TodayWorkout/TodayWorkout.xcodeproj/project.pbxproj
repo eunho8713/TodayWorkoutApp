@@ -17,8 +17,11 @@
 		320EF041293834A500DB4A4E /* TodayWorkoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EF040293834A500DB4A4E /* TodayWorkoutTests.swift */; };
 		320EF04B293834A500DB4A4E /* TodayWorkoutUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EF04A293834A500DB4A4E /* TodayWorkoutUITests.swift */; };
 		320EF04D293834A500DB4A4E /* TodayWorkoutUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 320EF04C293834A500DB4A4E /* TodayWorkoutUITestsLaunchTests.swift */; };
-		322A81C62941C539002BDF00 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 322A81C52941C539002BDF00 /* Response.swift */; };
 		327C901329557D0300D5E2BC /* NewResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C901229557D0300D5E2BC /* NewResponse.swift */; };
+		327C9015295A7B0700D5E2BC /* NetWorkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C9014295A7B0700D5E2BC /* NetWorkController.swift */; };
+		327C9017295A84F800D5E2BC /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C9016295A84F800D5E2BC /* NetWork.swift */; };
+		327C9019295A88AA00D5E2BC /* TodayWorkoutURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C9018295A88AA00D5E2BC /* TodayWorkoutURL.swift */; };
+		327C901E295A8B1100D5E2BC /* TodayWorkoutAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327C901D295A8B1100D5E2BC /* TodayWorkoutAPI.swift */; };
 		40B2DC6022E337DCE9F6A782 /* Pods_TodayWorkoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89DA30275D9AC12F624742F9 /* Pods_TodayWorkoutTests.framework */; };
 		58E4C7126958E7272772D34C /* Pods_TodayWorkout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189C2D0F62BFEA854BC935F5 /* Pods_TodayWorkout.framework */; };
 /* End PBXBuildFile section */
@@ -57,8 +60,11 @@
 		320EF046293834A500DB4A4E /* TodayWorkoutUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TodayWorkoutUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		320EF04A293834A500DB4A4E /* TodayWorkoutUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWorkoutUITests.swift; sourceTree = "<group>"; };
 		320EF04C293834A500DB4A4E /* TodayWorkoutUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWorkoutUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		322A81C52941C539002BDF00 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		327C901229557D0300D5E2BC /* NewResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewResponse.swift; sourceTree = "<group>"; };
+		327C9014295A7B0700D5E2BC /* NetWorkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkController.swift; sourceTree = "<group>"; };
+		327C9016295A84F800D5E2BC /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
+		327C9018295A88AA00D5E2BC /* TodayWorkoutURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWorkoutURL.swift; sourceTree = "<group>"; };
+		327C901D295A8B1100D5E2BC /* TodayWorkoutAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayWorkoutAPI.swift; sourceTree = "<group>"; };
 		429010476DD3083CBEC0E0CF /* Pods-TodayWorkoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayWorkoutTests.debug.xcconfig"; path = "Target Support Files/Pods-TodayWorkoutTests/Pods-TodayWorkoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		63C23320F26F1F99429D10C4 /* Pods-TodayWorkout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayWorkout.debug.xcconfig"; path = "Target Support Files/Pods-TodayWorkout/Pods-TodayWorkout.debug.xcconfig"; sourceTree = "<group>"; };
 		678CB6ADD93C75D39A8CBF2D /* Pods-TodayWorkout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TodayWorkout.release.xcconfig"; path = "Target Support Files/Pods-TodayWorkout/Pods-TodayWorkout.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +126,9 @@
 		320EF028293834A400DB4A4E /* TodayWorkout */ = {
 			isa = PBXGroup;
 			children = (
+				327C901C295A8AF700D5E2BC /* NetWork */,
+				327C901B295A8ADA00D5E2BC /* Error */,
+				327C901A295A8ACD00D5E2BC /* Protocol */,
 				322A81C22941C23B002BDF00 /* Model */,
 				322A81C32941C240002BDF00 /* View */,
 				322A81C42941C248002BDF00 /* Controller */,
@@ -149,7 +158,6 @@
 		322A81C22941C23B002BDF00 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				322A81C52941C539002BDF00 /* Response.swift */,
 				327C901229557D0300D5E2BC /* NewResponse.swift */,
 			);
 			path = Model;
@@ -168,10 +176,35 @@
 			isa = PBXGroup;
 			children = (
 				320EF02D293834A400DB4A4E /* ViewController.swift */,
+				327C9014295A7B0700D5E2BC /* NetWorkController.swift */,
 				320EF029293834A400DB4A4E /* AppDelegate.swift */,
 				320EF02B293834A400DB4A4E /* SceneDelegate.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		327C901A295A8ACD00D5E2BC /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				327C9018295A88AA00D5E2BC /* TodayWorkoutURL.swift */,
+				327C901D295A8B1100D5E2BC /* TodayWorkoutAPI.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		327C901B295A8ADA00D5E2BC /* Error */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		327C901C295A8AF700D5E2BC /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				327C9016295A84F800D5E2BC /* NetWork.swift */,
+			);
+			path = NetWork;
 			sourceTree = "<group>";
 		};
 		F8D1658E4E5211C8733DEC66 /* Pods */ = {
@@ -438,9 +471,12 @@
 			files = (
 				327C901329557D0300D5E2BC /* NewResponse.swift in Sources */,
 				320EF02E293834A400DB4A4E /* ViewController.swift in Sources */,
+				327C9015295A7B0700D5E2BC /* NetWorkController.swift in Sources */,
 				320EF02A293834A400DB4A4E /* AppDelegate.swift in Sources */,
 				320EF02C293834A400DB4A4E /* SceneDelegate.swift in Sources */,
-				322A81C62941C539002BDF00 /* Response.swift in Sources */,
+				327C9017295A84F800D5E2BC /* NetWork.swift in Sources */,
+				327C901E295A8B1100D5E2BC /* TodayWorkoutAPI.swift in Sources */,
+				327C9019295A88AA00D5E2BC /* TodayWorkoutURL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
